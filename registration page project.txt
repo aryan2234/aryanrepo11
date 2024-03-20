@@ -1,0 +1,31 @@
+package abcd234;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class eclipse44 {
+
+	public static void main(String[] args) throws InterruptedException {
+	       WebDriver abc = new ChromeDriver();
+	       abc.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+	       abc.get("https://awesomeqa.com/ui/");
+	       abc.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+           abc.findElement(By.xpath("(//li[@class=\"dropdown\"])[1]")).click();	
+           abc.findElement(By.linkText("Register")).click();   
+	       abc.findElement(By.xpath("//input[@name=\"firstname\"]")).sendKeys("hghjgjh");
+		   abc.findElement(By.xpath("//input[@name=\"lastname\"]")).sendKeys("hghjgjh");
+		   abc.findElement(By.xpath("//input[@name=\"email\"]")).sendKeys("ar815@gmail.com");
+		   abc.findElement(By.xpath("//input[@name=\"telephone\"]")).sendKeys("hghjgjh");
+		   abc.findElement(By.xpath("//input[@name=\"password\"]")).sendKeys("hghjgjh");
+   abc.findElement(By.xpath("//input[@name=\"confirm\"]")).sendKeys("hghjgjh");
+           abc.findElement(By.name("agree")).click();   
+           Thread.sleep(200);
+	       abc.findElement(By.xpath("//input[@value=\"Continue\"]")).click();
+			
+		}
+
+}

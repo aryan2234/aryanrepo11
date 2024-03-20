@@ -1,0 +1,27 @@
+package abcd234;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Login22 {
+
+	public static void main(String[] args) {
+	       WebDriver abc = new ChromeDriver();
+	       abc.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+	       abc.get("https://awesomeqa.com/ui/");
+	       abc.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+           abc.findElement(By.xpath("(//li[@class=\"dropdown\"])[1]")).click();	
+           abc.findElement(By.linkText("Login")).click();   
+          abc.findElement(By.xpath("//input[@name=\"email\"]")).sendKeys("fdfsdf");        
+           abc.findElement(By.xpath("//input[@name=\"password\"]")).sendKeys("fdfsdf");        
+           abc.findElement(By.xpath("//input@type=\"submit\"]")).click();        
+
+	      
+	}
+
+}
+
+
