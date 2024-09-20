@@ -1,0 +1,34 @@
+package Javascreen.aryan12;
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Dummyecommerce {
+
+	public static void main(String[] args) {
+	       WebDriver abc = new ChromeDriver();
+	       abc.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+	       abc.get("https://magento.softwaretestingboard.com/");
+           abc.findElement(By.xpath(" (//a[@href=\"https://magento.softwaretestingboard.com/customer/account/create/\"])[1] ")).click();	
+           abc.findElement(By.name("firstname")).sendKeys("fdfsdf");        
+           abc.findElement(By.name("lastname")).sendKeys("fdfsdf");        
+           abc.findElement(By.name("email")).sendKeys("fdfsdf");        
+           abc.findElement(By.name("password")).sendKeys("fdgdfgdf");  
+           abc.findElement(By.name("password_confirmation")).sendKeys("fdgdfgdf");        
+           abc.findElement(By.xpath("//button[@title=\"Create an Account\"]")).click(); 
+           
+           
+           abc.findElement(By.linkText("Sign In ")).click();
+           abc.findElement(By.id("email")).sendKeys("fdfsdf");        
+           abc.findElement(By.name("pass")).sendKeys("fdfsdf");    
+           
+
+           abc.findElement(By.xpath("//input[@name=\"search\"]")).sendKeys("jacket");        
+
+           abc.findElement(By.xpath("//img[@alt=\"Adrienne Trek Jacket\"]")).click(); 
+
+	}
+
+}
